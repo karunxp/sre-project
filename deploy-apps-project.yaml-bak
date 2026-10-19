@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: deploy
+  # OpenShift GitOps typically installs in the openshift-gitops namespace
+  namespace: openshift-gitops 
+spec:
+  clusterResourceWhitelist:
+    - group: rbac.authorization.k8s.io
+      kind: ClusterRole
+    - group: rbac.authorization.k8s.io
+      kind: ClusterRoleBinding
+    - group: apiextensions.k8s.io
+      kind: CustomResourceDefinition
+    # --- OpenShift Specific Cluster Resources ---
+    - group: security.openshift.io
+      kind: SecurityContextConstraints   # Allows managing SCCs if required
+    - group: config.openshift.io
+      kind: *                            # Allows cluster-wide configurations if needed
+  description: Ghost Blog project
+  destinations:
+    - name: '*'
+      namespace: '*'
+      server: https://kubernetes.default.svc
+  roles:
+    - name: deploy-app
+      groups:
+        - rbac.authorization.k8s.io
+  sourceRepos:
+    - '*'

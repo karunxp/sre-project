@@ -6,10 +6,10 @@ metadata:
   # annotations:
     # argocd.argoproj.io/sync-wave: "1" # Higher sync wave
 spec:
-  project: default # Argo CD projects, default is fine for now
+  project: deploy # Argo CD projects, default is fine for now
   source:
-    repoURL: 'https://github.com/gesselsam96/sre-project.git' # Your GitHub repo
-    targetRevision: master # Git branch
+    repoURL: 'https://github.com/karunxp/sre-project.git' # Your GitHub repo
+    targetRevision: main # Git branch
     path: ghost # Path inside the repo to Helm chart
     helm:
       valueFiles:
