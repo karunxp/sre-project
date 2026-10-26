@@ -765,9 +765,9 @@ server:
   ##
   extraScrapeConfigs:
   - job_name: 'ghost-mysql-metrics'
-    srcape_interval: 5s
+    scrape_interval: 30s
     static_configs:
-    - targets: ['ghost-mysql-metrics.app.svc.cluster.local:9104']
+      - targets: ['ghost-mysql-metrics.app.svc.cluster.local:9104']
   ## @param server.useStatefulSet Whether to use a StatefulSet or a Deployment to deploy Prometheus server
   ##
   useStatefulSet: false
