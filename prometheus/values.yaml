@@ -1588,7 +1588,7 @@ server:
     ## NOTE: choose port between <30000-32767>
     ##
     nodePorts:
-      http: ""
+      http: 30596
     ## @param server.service.clusterIP Prometheus service Cluster IP
     ## e.g.:
     ## clusterIP: None
