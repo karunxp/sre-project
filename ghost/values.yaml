@@ -114,7 +114,7 @@ ghostUsername: arunkumar
 ## @param ghostPassword Ghost user password
 ## Defaults to a random 10-character alphanumeric string if not set
 ##
-ghostPassword: "Passw0rd@2026#"
+ghostPassword: "gI@mIi90L9Zva4!4"
 ## @param existingSecret Name of existing secret containing Ghost credentials
 ## NOTE: Must contain key `ghost-password`
 ## NOTE: When it's set, the `ghostPassword` parameter is ignored
