@@ -445,8 +445,8 @@ service:
   ## NOTE: choose port between <30000-32767>
   ##
   nodePorts:
-    http: "300567"
-    https: "300568"
+    http: "30567"
+    https: "30568"
   ## @param service.clusterIP Ghost service Cluster IP
   ## e.g.:
   ## clusterIP: None
