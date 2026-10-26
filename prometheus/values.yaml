@@ -96,7 +96,7 @@ alertmanager:
   enabled: true
   image:
     registry: docker.io
-    repository: bitnami/alertmanager
+    repository: bitnamilegacy/alertmanager
     tag: 0.28.1-debian-12-r15
     digest: ""
     ## Specify a imagePullPolicy
@@ -680,7 +680,7 @@ alertmanager:
 server:
   image:
     registry: docker.io
-    repository: bitnami/prometheus
+    repository: bitnamilegacy/prometheus
     tag: 3.5.0-debian-12-r3
     digest: ""
     ## Specify a imagePullPolicy
@@ -1097,7 +1097,7 @@ server:
     ##
     image:
       registry: docker.io
-      repository: bitnami/thanos
+      repository: bitnamilegacy/thanos
       tag: 0.39.2-debian-12-r2
       digest: ""
       ## ref: https://kubernetes.io/docs/concepts/containers/images/#pre-pulled-images
